@@ -7,9 +7,11 @@ import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
-import ListStuff from '../pages/ListStuff';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
-import AddStuff from '../pages/AddStuff';
+import ListPost from '../pages/ListPost';
+import ListPostAdmin from '../pages/ListPostAdmin';
+import ListRequestAdmin from '../pages/ListRequestAdmin';
+import AddPost from '../pages/AddPost';
+import AddRequest from '../pages/AddRequest';
 import EditStuff from '../pages/EditStuff';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
@@ -27,10 +29,12 @@ class App extends React.Component {
               <Route exact path="/" component={Landing}/>
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
-              <ProtectedRoute path="/list" component={ListStuff}/>
-              <ProtectedRoute path="/add" component={AddStuff}/>
+              <ProtectedRoute path="/listpost" component={ListPost}/>
+              <ProtectedRoute path="/addpost" component={AddPost}/>
+                <ProtectedRoute path="/addrequest" component={AddRequest}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
-              <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+              <AdminProtectedRoute path="/adminpost" component={ListPostAdmin}/>
+                <AdminProtectedRoute path="/adminrequest" component={ListRequestAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>

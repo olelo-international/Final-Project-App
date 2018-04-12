@@ -9,5 +9,15 @@
     { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
-  ]
+  ],
+  "defaultPosts": [
+    { "topic": "Welcome", "owner": "john@foo.com", "description": "Welcome to 'Olelo International! Post any question you have in the forums. " },
+    { "topic": "Comment", "owner": "john@foo.com", "description": "You can comment under any post. " }
+    ],
+  "defaultRequest": [
+    {"language": "Japanese", "owner": "john@foo.com"},
+    {"language": "Korean", "owner": "john@foo.com"},
+    {"language": "Chinese", "owner": "john@foo.com"}
+    ]
+
 }
