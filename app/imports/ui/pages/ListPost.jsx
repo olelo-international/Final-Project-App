@@ -22,7 +22,7 @@ class ListPost extends React.Component {
           <Header as="h2" textAlign="center">Post</Header>
           <Card.Group>
             {this.props.posts.map((post, index) => <Post key={index} post={post}
-            comments={this.props.notes.filter(note => (note.contactId === contact._id))}/>)}
+            comments={this.props.comments.filter(comment => (comments.contactId === posts._id))}/>)}
           </Card.Group>
         </Container>
     );
