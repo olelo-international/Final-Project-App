@@ -24,6 +24,14 @@ class Landing extends React.Component {
             </Grid.Column>
 
           </Grid>
+
+          <Grid container centered>
+            <div className='olelo-landing-format'>
+              <p>Sign up with your UH email!</p>
+              <p>Access announcements about events on campus. Connect with other students and utilize or improve your language skills!</p>
+
+            </div>
+          </Grid>
         </div>
     );
   }
