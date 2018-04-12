@@ -19,12 +19,14 @@ class NavBar extends React.Component {
             <Header inverted as='h1'>ʻŌlelo International</Header>
           </Menu.Item>
           {this.props.currentUser ? (
-              [<Menu.Item as={NavLink} activeClassName="active" exact to="/addpost" key='addpost'>Add Post</Menu.Item>,
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/listpost" key='listpost'>Post</Menu.Item>,
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/addrequest" key='addrequest'>Add Request</Menu.Item>]
+              [<Menu.Item as={NavLink} activeClassName="active" exact to="/addpost" key='addpost'>Home</Menu.Item>,
+                <Menu.Item as={NavLink} activeClassName="active" exact to="/listpost" key='listpost'>Language Forums</Menu.Item>,
+                <Menu.Item as={NavLink} activeClassName="active" exact to="/addrequest" key='addrequest'>Add Request</Menu.Item>,
+                <Menu.Item as={NavLink} activeClassName="active" exact to="/listpost" key='listpost'>My Profile</Menu.Item>]
           ) : ''}
           {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
               <Menu.Item as={NavLink} activeClassName="active" exact to="/adminpost" key='adminpost'>Post (Admin)</Menu.Item>,
+                  <Menu.Item as={NavLink} activeClassName="active" exact to="/listpost" key='listpost'>Language Forums</Menu.Item>,
                   <Menu.Item as={NavLink} activeClassName="active" exact to="/adminrequest" key='adminrequest'>Forum Request (Admin Only)</Menu.Item>
           ) : ''}
           <Menu.Item position="right">
