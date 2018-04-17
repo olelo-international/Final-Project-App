@@ -1,13 +1,35 @@
 import React from 'react';
-import { Table, Button, Card, Feed } from 'semantic-ui-react';
+import { Table, Button, Card, Feed, Confirm } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
+import { Bert } from 'meteor/themeteorchef:bert';
 import Comment from '/imports/ui/components/Comment';
 import AddComment from '/imports/ui/components/AddComment';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Post extends React.Component {
-  render() {
+     constructor(props) {
+        super(props);
+        this.onClick = this.onClick.bind(this);
+        this.formRef = null;
+    }
+    onClick() {
+        post.remove((this.props.post._id), this.deleteCallback);
+    }
+    deleteCallback(error) {
+        if (error) {
+            Bert.alert({ type: 'danger', message: `Delete failed: ${error.message}` });
+        } else {
+            Bert.alert({ type: 'success', message: 'Delete succeeded' });
+            this.formRef.reset();
+        }
+    }
+    state = { open: false }
+
+    handleButtonClick = () => this.setState({ open: true })
+    handleConfirm = () => this.setState({ open: false })
+    handleCancel = () => this.setState({ open: false })
+    render() {
     return (
         <Card centered>
           <Card.Content>
@@ -26,6 +48,19 @@ class Post extends React.Component {
             <Card.Content extra>
                 <AddComment owner={this.props.post.owner} contactId={this.props.post._id}/>
             </Card.Content>
+            <Card.Content extra>
+                <Button onClick={this.handleButtonClick}>Delete</Button>
+                <Confirm
+                    open={this.state.open}
+                    header='confirm'
+                    content='Are you sure to delete'
+                    cancelButton='no'
+                    confirmButton="yes"
+                    onCancel={this.handleCancel}
+                    onConfirm={this.onClick}
+                    size='large'
+                />
+            </Card.Content>
         </Card>
             );
   }
@@ -33,8 +68,8 @@ class Post extends React.Component {
 
 /** Require a document to be passed to this component. */
 Post.propTypes = {
-  post: PropTypes.object.isRequired,
-    comments:PropTypes.array.isRequired,
+    post: PropTypes.object.isRequired,
+    comments: PropTypes.array.isRequired,
 };
 
 /** Wrap this component in withRouter since we use the <Link> React Router element. */

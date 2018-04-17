@@ -33,8 +33,8 @@ class App extends React.Component {
               <ProtectedRoute path="/addpost" component={AddPost}/>
                 <ProtectedRoute path="/addrequest" component={AddRequest}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
-                <AdminProtectedRoute path="/adminpost" component={ListPostAdmin}/>
                 <AdminProtectedRoute path="/adminrequest" component={ListRequestAdmin}/>
+                <AdminProtectedRoute path="/adminpost" component={ListPostAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <Route component={NotFound}/>
             </Switch>

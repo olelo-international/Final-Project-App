@@ -3,6 +3,7 @@ import { Table, Button, Card, Feed } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 import Comment from '/imports/ui/components/Comment';
+import AddComment from '/imports/ui/components/AddComment';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class PostAdmin extends React.Component {
@@ -19,11 +20,11 @@ class PostAdmin extends React.Component {
                 </Card.Content>
                 <Card.Content extra>
                     <Feed>
-                        {this.props.comments.map((comment, index) => <Comment key={index} note={comment}/>)}
+                        {this.props.comments.map((comment, index) => <Comment key={index} comment={comment}/>)}
                     </Feed>
                 </Card.Content>
                 <Card.Content extra>
-                    <Comment owner={this.props.comments.owner} contactId={this.props.comments._id}/>
+                    <AddComment owner={this.props.post.owner} contactId={this.props.post._id}/>
                 </Card.Content>
             </Card>
         );
