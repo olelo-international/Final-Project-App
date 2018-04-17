@@ -5,6 +5,7 @@ import { withRouter, Link } from 'react-router-dom';
 import { Bert } from 'meteor/themeteorchef:bert';
 import Comment from '/imports/ui/components/Comment';
 import AddComment from '/imports/ui/components/AddComment';
+import { Posts } from '../../api/posts/post';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Post extends React.Component {
@@ -14,7 +15,8 @@ class Post extends React.Component {
         this.formRef = null;
     }
     onClick() {
-        post.remove((this.props.post._id), this.deleteCallback);
+        Posts.remove((this.props.post._id), this.deleteCallback);
+        this.setState({ open: false });
     }
     deleteCallback(error) {
         if (error) {
@@ -27,7 +29,6 @@ class Post extends React.Component {
     state = { open: false }
 
     handleButtonClick = () => this.setState({ open: true })
-    handleConfirm = () => this.setState({ open: false })
     handleCancel = () => this.setState({ open: false })
     render() {
     return (

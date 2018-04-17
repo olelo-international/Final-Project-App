@@ -31,8 +31,7 @@ class App extends React.Component {
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/listpost" component={ListPost}/>
               <ProtectedRoute path="/addpost" component={AddPost}/>
-                <ProtectedRoute path="/addrequest" component={AddRequest}/>
-              <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
+               <ProtectedRoute path="/addrequest" component={AddRequest}/>
                 <AdminProtectedRoute path="/adminrequest" component={ListRequestAdmin}/>
                 <AdminProtectedRoute path="/adminpost" component={ListPostAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
