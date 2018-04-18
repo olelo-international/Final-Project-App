@@ -12,7 +12,7 @@ import ListPostAdmin from '../pages/ListPostAdmin';
 import ListRequestAdmin from '../pages/ListRequestAdmin';
 import AddPost from '../pages/AddPost';
 import AddRequest from '../pages/AddRequest';
-import EditStuff from '../pages/EditStuff';
+import ListProfile from '../pages/ListProfile';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
@@ -32,6 +32,7 @@ class App extends React.Component {
               <ProtectedRoute path="/listpost" component={ListPost}/>
               <ProtectedRoute path="/addpost" component={AddPost}/>
                <ProtectedRoute path="/addrequest" component={AddRequest}/>
+                <ProtectedRoute path="/profile" component={ListProfile}/>
                 <AdminProtectedRoute path="/adminrequest" component={ListRequestAdmin}/>
                 <AdminProtectedRoute path="/adminpost" component={ListPostAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>

@@ -19,7 +19,6 @@ if (Posts.find().count() === 0) {
 /** This subscription publishes only the documents associated with the logged in user */
 Meteor.publish('Posts', function publish() {
   if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
     return Posts.find();
   }
   return this.ready();
