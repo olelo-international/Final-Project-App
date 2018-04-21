@@ -1,7 +1,7 @@
 import React from 'react';
-import { Table, Button, Card, Feed } from 'semantic-ui-react';
+import { Card, Feed } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import Comment from '/imports/ui/components/Comment';
 import AddComment from '/imports/ui/components/AddComment';
 

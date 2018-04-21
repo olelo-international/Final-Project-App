@@ -19,7 +19,7 @@ class ListPostAdmin extends React.Component {
     renderPage() {
         return (
             <Container>
-                <Header as="h2" textAlign="center">Post (Admin)</Header>
+                <Header as="h2" textAlign="center" inverted>Post (Admin)</Header>
                 <Card.Group>
                     {this.props.posts.map((post, index) => <PostAdmin key={index} post={post}
                      comments={this.props.comments.filter(comment => (comment.contactId === post._id))}/>)}

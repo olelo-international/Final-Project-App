@@ -19,7 +19,7 @@ class ListPost extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">Post</Header>
+          <Header as="h2" textAlign="center" inverted>Post</Header>
           <Card.Group>
             {this.props.posts.map((post, index) => <Post key={index} post={post}
             comments={this.props.comments.filter(comment => (comment.contactId === post._id))}/>)}

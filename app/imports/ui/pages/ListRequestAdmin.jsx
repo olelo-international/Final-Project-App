@@ -18,7 +18,7 @@ class ListRequestAdmin extends React.Component {
     renderPage() {
         return (
             <Container>
-                <Header as="h2" textAlign="center">Request for Forum (Admin only)</Header>
+                <Header as="h2" textAlign="center" inverted>Request for Forum (Admin only)</Header>
                 <Card.Group>
                     {this.props.requests.map((request, index) => <RequestAdmin key={index} request={request}/>)}
                 </Card.Group>

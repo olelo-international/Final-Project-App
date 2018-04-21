@@ -3,8 +3,6 @@ import { Requests, RequestSchema } from '/imports/api/request/request';
 import { Grid, Segment, Header } from 'semantic-ui-react';
 import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
-import LongTextField from 'uniforms-semantic/LongTextField';
-import SelectField from 'uniforms-semantic/SelectField';
 import SubmitField from 'uniforms-semantic/SubmitField';
 import HiddenField from 'uniforms-semantic/HiddenField';
 import ErrorsField from 'uniforms-semantic/ErrorsField';
@@ -45,10 +43,10 @@ class AddRequest extends React.Component {
         return (
             <Grid container centered>
                 <Grid.Column>
-                    <Header as="h2" textAlign="Left"> Request a Forum </Header>
+                    <Header as="h2" textAlign="center" inverted> Request a Forum </Header>
                     <AutoForm ref={(ref) => { this.formRef = ref; }} schema={RequestSchema} onSubmit={this.submit}>
                         <Segment>
-                            <TextField  name='language'/>
+                            <TextField name='language'/>
                             <SubmitField value='Submit'/>
                             <ErrorsField/>
                             <HiddenField name='owner' value='fakeuser@foo.com'/>
