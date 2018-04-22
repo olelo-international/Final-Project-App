@@ -44,7 +44,7 @@ class AddPost extends React.Component {
     return (
         <Grid container centered>
           <Grid.Column>
-            <Header as="h2" textAlign="Left Aligned">Make Your Post</Header>
+            <Header as="h2" textAlign="Left Aligned" inverted>Make Your Post</Header>
             <AutoForm ref={(ref) => { this.formRef = ref; }} schema={PostSchema} onSubmit={this.submit}>
               <Segment>
                 <TextField name='topic'/>

@@ -18,11 +18,6 @@
     {"language": "Japanese", "owner": "john@foo.com"},
     {"language": "Korean", "owner": "john@foo.com"},
     {"language": "Chinese", "owner": "john@foo.com"}
-    ],
-  "defaultProfiles": [
-    {"language": "Japanese", "owner": "john@foo.com"},
-    {"language": "Korean", "owner": "john@foo.com"},
-    {"language": "Chinese", "owner": "john@foo.com"}
-  ]
+    ]
 
 }
