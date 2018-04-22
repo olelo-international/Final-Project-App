@@ -1,0 +1,377 @@
+import React from 'react';
+import { Meteor } from 'meteor/meteor';
+import { Container, Card, Header, Loader, Button } from 'semantic-ui-react';
+import { Posts } from '/imports/api/posts/post';
+import { Comments } from '/imports/api/comment/comment';
+import { withTracker } from 'meteor/react-meteor-data';
+import PropTypes from 'prop-types';
+
+/** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
+class Forums extends React.Component {
+
+  /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
+  render() {
+    return (this.props.ready) ? this.renderPage() : <Loader>Getting data</Loader>;
+  }
+
+  /** Render the page once subscriptions have been received. */
+  renderPage() {
+    return (
+        <Container>
+          <Header as="h2" textAlign="center" inverted>Language Forums</Header>
+          <Card.Group itemsPerRow={3}>
+            <Card>
+              <Card.Content>
+                <Card.Header>Arabic</Card.Header>
+                <Card.Meta>101, 201</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Burmese</Card.Header>
+                <Card.Meta>Not available for Fall 2018.</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Cambodian</Card.Header>
+                <Card.Meta>101, 103, 105, 205</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Cantonese</Card.Header>
+                <Card.Meta>Not available for Fall 2018.</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Chamorro</Card.Header>
+                <Card.Meta>201</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Filipino</Card.Header>
+                <Card.Meta>101, 102, 201, 202, 301, 401, 435</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>French</Card.Header>
+                <Card.Meta>101, 102, 201, 202, 301, 302, 306, 311, 312, 331, 405, 491E, 601, 735</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>German</Card.Header>
+                <Card.Meta>101, 102, 201, 202, 301, 303, 20, 401</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Greek</Card.Header>
+                <Card.Meta>101, 201, 332</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Hawaiian</Card.Header>
+                <Card.Meta>100, 101, 102, 201, 202, 284, 301, 302, 321, 331, 401, 402, 425, 433, 445, 470, 488, 601,
+                605, 615, 652</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Hebrew</Card.Header>
+                <Card.Meta>Not available for Fall 2018.</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Hindi</Card.Header>
+                <Card.Meta>101, 201, 301</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Ilokano</Card.Header>
+                <Card.Meta>101, 201, 301, 401, 424, 486</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Indonesian</Card.Header>
+                <Card.Meta>103, 203, 305, 307, 401, 452</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Italian</Card.Header>
+                <Card.Meta>101, 201</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Japanese</Card.Header>
+                <Card.Meta>101, 102, 201, 202</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Korean</Card.Header>
+                <Card.Meta>101, 102, 201, 202, 301, 302</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Lao</Card.Header>
+                <Card.Meta>Not available for Fall 2018.</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Latin</Card.Header>
+                <Card.Meta>101, 201, 303</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Mandarin</Card.Header>
+                <Card.Meta>Not available for Fall 2018.</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Maori</Card.Header>
+                <Card.Meta>101, 201</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Portuguese</Card.Header>
+                <Card.Meta>103</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Russian</Card.Header>
+                <Card.Meta>101, 201, 209, 303, 306, 419</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Samoan</Card.Header>
+                <Card.Meta>101, 201, 227, 321, 421, 461</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Sanskrit</Card.Header>
+                <Card.Meta>181, 685</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Spanish</Card.Header>
+                <Card.Meta>101, 102, 201, 202</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Tahitian</Card.Header>
+                <Card.Meta>103, 203</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Thai</Card.Header>
+                <Card.Meta>103, 105, 201, 401, 451</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Tongan</Card.Header>
+                <Card.Meta>201.</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+            <Card>
+              <Card.Content>
+                <Card.Header>Vietnamese</Card.Header>
+                <Card.Meta>101. 201</Card.Meta>
+              </Card.Content>
+              <Card.Content extra>
+                <div className='ui button'>
+                  <Button color='teal'>Go to Forum</Button>
+                </div>
+              </Card.Content>
+            </Card>
+          </Card.Group>
+        </Container>
+    );
+  }
+}
+
+/** Require an array of Stuff documents in the props. */
+Forums.propTypes = {
+  posts: PropTypes.array.isRequired,
+  comments: PropTypes.array.isRequired,
+  ready: PropTypes.bool.isRequired,
+};
+
+/** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
+export default withTracker(() => {
+  // Get access to Stuff documents.
+  const subscription = Meteor.subscribe('Posts');
+  const subscription2 = Meteor.subscribe('Comments');
+  return {
+    posts: Posts.find({}).fetch(),
+    comments: Comments.find({}).fetch(),
+    ready: (subscription.ready() && subscription2.ready()),
+  };
+})(Forums);
