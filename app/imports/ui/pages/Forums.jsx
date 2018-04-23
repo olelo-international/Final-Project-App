@@ -5,6 +5,7 @@ import { Posts } from '/imports/api/posts/post';
 import { Comments } from '/imports/api/comment/comment';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class Forums extends React.Component {
@@ -25,18 +26,7 @@ class Forums extends React.Component {
                 <Card.Header>Arabic</Card.Header>
                 <Card.Meta>101, 201</Card.Meta>
               </Card.Content>
-              <Card.Content extra>
-                <div className='ui button'>
-                  <Button color='teal'>Go to Forum</Button>
-                </div>
-              </Card.Content>
-            </Card>
-            <Card>
-              <Card.Content>
-                <Card.Header>Burmese</Card.Header>
-                <Card.Meta>Not available for Fall 2018.</Card.Meta>
-              </Card.Content>
-              <Card.Content extra>
+              <Card.Content extra as={NavLink} activeClassName="active" exact to="/arabicforum" key='arabicforum'>
                 <div className='ui button'>
                   <Button color='teal'>Go to Forum</Button>
                 </div>
@@ -46,28 +36,6 @@ class Forums extends React.Component {
               <Card.Content>
                 <Card.Header>Cambodian</Card.Header>
                 <Card.Meta>101, 103, 105, 205</Card.Meta>
-              </Card.Content>
-              <Card.Content extra>
-                <div className='ui button'>
-                  <Button color='teal'>Go to Forum</Button>
-                </div>
-              </Card.Content>
-            </Card>
-            <Card>
-              <Card.Content>
-                <Card.Header>Cantonese</Card.Header>
-                <Card.Meta>Not available for Fall 2018.</Card.Meta>
-              </Card.Content>
-              <Card.Content extra>
-                <div className='ui button'>
-                  <Button color='teal'>Go to Forum</Button>
-                </div>
-              </Card.Content>
-            </Card>
-            <Card>
-              <Card.Content>
-                <Card.Header>Chamorro</Card.Header>
-                <Card.Meta>201</Card.Meta>
               </Card.Content>
               <Card.Content extra>
                 <div className='ui button'>
@@ -133,17 +101,6 @@ class Forums extends React.Component {
             </Card>
             <Card>
               <Card.Content>
-                <Card.Header>Hebrew</Card.Header>
-                <Card.Meta>Not available for Fall 2018.</Card.Meta>
-              </Card.Content>
-              <Card.Content extra>
-                <div className='ui button'>
-                  <Button color='teal'>Go to Forum</Button>
-                </div>
-              </Card.Content>
-            </Card>
-            <Card>
-              <Card.Content>
                 <Card.Header>Hindi</Card.Header>
                 <Card.Meta>101, 201, 301</Card.Meta>
               </Card.Content>
@@ -177,17 +134,6 @@ class Forums extends React.Component {
             </Card>
             <Card>
               <Card.Content>
-                <Card.Header>Italian</Card.Header>
-                <Card.Meta>101, 201</Card.Meta>
-              </Card.Content>
-              <Card.Content extra>
-                <div className='ui button'>
-                  <Button color='teal'>Go to Forum</Button>
-                </div>
-              </Card.Content>
-            </Card>
-            <Card>
-              <Card.Content>
                 <Card.Header>Japanese</Card.Header>
                 <Card.Meta>101, 102, 201, 202</Card.Meta>
               </Card.Content>
@@ -210,17 +156,6 @@ class Forums extends React.Component {
             </Card>
             <Card>
               <Card.Content>
-                <Card.Header>Lao</Card.Header>
-                <Card.Meta>Not available for Fall 2018.</Card.Meta>
-              </Card.Content>
-              <Card.Content extra>
-                <div className='ui button'>
-                  <Button color='teal'>Go to Forum</Button>
-                </div>
-              </Card.Content>
-            </Card>
-            <Card>
-              <Card.Content>
                 <Card.Header>Latin</Card.Header>
                 <Card.Meta>101, 201, 303</Card.Meta>
               </Card.Content>
@@ -232,30 +167,8 @@ class Forums extends React.Component {
             </Card>
             <Card>
               <Card.Content>
-                <Card.Header>Mandarin</Card.Header>
-                <Card.Meta>Not available for Fall 2018.</Card.Meta>
-              </Card.Content>
-              <Card.Content extra>
-                <div className='ui button'>
-                  <Button color='teal'>Go to Forum</Button>
-                </div>
-              </Card.Content>
-            </Card>
-            <Card>
-              <Card.Content>
                 <Card.Header>Maori</Card.Header>
                 <Card.Meta>101, 201</Card.Meta>
-              </Card.Content>
-              <Card.Content extra>
-                <div className='ui button'>
-                  <Button color='teal'>Go to Forum</Button>
-                </div>
-              </Card.Content>
-            </Card>
-            <Card>
-              <Card.Content>
-                <Card.Header>Portuguese</Card.Header>
-                <Card.Meta>103</Card.Meta>
               </Card.Content>
               <Card.Content extra>
                 <div className='ui button'>
@@ -287,17 +200,6 @@ class Forums extends React.Component {
             </Card>
             <Card>
               <Card.Content>
-                <Card.Header>Sanskrit</Card.Header>
-                <Card.Meta>181, 685</Card.Meta>
-              </Card.Content>
-              <Card.Content extra>
-                <div className='ui button'>
-                  <Button color='teal'>Go to Forum</Button>
-                </div>
-              </Card.Content>
-            </Card>
-            <Card>
-              <Card.Content>
                 <Card.Header>Spanish</Card.Header>
                 <Card.Meta>101, 102, 201, 202</Card.Meta>
               </Card.Content>
@@ -309,41 +211,8 @@ class Forums extends React.Component {
             </Card>
             <Card>
               <Card.Content>
-                <Card.Header>Tahitian</Card.Header>
-                <Card.Meta>103, 203</Card.Meta>
-              </Card.Content>
-              <Card.Content extra>
-                <div className='ui button'>
-                  <Button color='teal'>Go to Forum</Button>
-                </div>
-              </Card.Content>
-            </Card>
-            <Card>
-              <Card.Content>
                 <Card.Header>Thai</Card.Header>
                 <Card.Meta>103, 105, 201, 401, 451</Card.Meta>
-              </Card.Content>
-              <Card.Content extra>
-                <div className='ui button'>
-                  <Button color='teal'>Go to Forum</Button>
-                </div>
-              </Card.Content>
-            </Card>
-            <Card>
-              <Card.Content>
-                <Card.Header>Tongan</Card.Header>
-                <Card.Meta>201.</Card.Meta>
-              </Card.Content>
-              <Card.Content extra>
-                <div className='ui button'>
-                  <Button color='teal'>Go to Forum</Button>
-                </div>
-              </Card.Content>
-            </Card>
-            <Card>
-              <Card.Content>
-                <Card.Header>Vietnamese</Card.Header>
-                <Card.Meta>101. 201</Card.Meta>
               </Card.Content>
               <Card.Content extra>
                 <div className='ui button'>

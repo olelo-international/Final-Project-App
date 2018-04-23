@@ -16,6 +16,7 @@ import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import Forums from '../pages/Forums';
+import ArabicForum from '../pages/ArabicForum';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -29,6 +30,7 @@ class App extends React.Component {
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/forums" component={Forums}/>
+              <ProtectedRoute pathe="/arabicforum" component={ArabicForum}/>
               <ProtectedRoute path="/addpost" component={AddPost}/>
                <ProtectedRoute path="/addrequest" component={AddRequest}/>
                 <AdminProtectedRoute path="/adminrequest" component={ListRequestAdmin}/>
