@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Container, Card } from 'semantic-ui-react';
+import { Header, Container, Card, Button } from 'semantic-ui-react';
 import { Meteor } from 'meteor/meteor';
 import Post from '/imports/ui/components/Post';
 import { Comments } from '/imports/api/comment/comment';
@@ -7,14 +7,13 @@ import { Posts } from '/imports/api/posts/post';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
-
 class HomePage extends React.Component{
   render() {
     return(
         <Container>
           <Header as="h2" inverted textAlign="centered">Announcements</Header>
           <Header inverted textAlign="centered">E Komo Mai! Announcements about upcoming events and communications from Admin and other organiztions can be found here</Header>
-
+          <Button floated='right' href='#AddPost' inverted>New Post</Button>
           <Card.Group>
             {this.props.posts.map((post, index) => <Post key={index} post={post} comments={this.props.comments.filter(comment => (comment.contactId === post._id))}/>)}
           </Card.Group>
