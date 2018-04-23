@@ -40,13 +40,12 @@ class Landing extends React.Component {
               <Grid.Column textAlign='center'>
                 <Icon size='huge' name='list' inverted/>
                 <Header as='h2' inverted >Language Forums</Header>
-                <Header as='h3' inverted >Post in one of the many language forums on the site - one for
-                  each of the four-semester sequenced languages offered in the UH System!</Header>
+                <Header as='h3' inverted >Post in one of the many language forums on the site!</Header>
               </Grid.Column>
 
               <Grid.Column textAlign='center'>
                 <Icon size='huge' name='comments outline' inverted/>
-                <Header as='h2' inverted >Communicate with Other Students</Header>
+                <Header as='h2' inverted >Communicate with Fellow Students</Header>
                 <Header as='h3' inverted >Comment on student&apos;s posts within each
                   language forum to interact.</Header>
               </Grid.Column>
