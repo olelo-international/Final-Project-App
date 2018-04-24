@@ -17,7 +17,6 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import HomePage from '../pages/HomePage';
 import Forums from '../pages/Forums';
-import ArabicForum from '../pages/ArabicForum';
 import JapaneseForum from '../pages/JapaneseForum';
 import CambodianForum from '../pages/CambodianForum';
 import TagalogForum from '../pages/TagalogForum';
@@ -35,6 +34,7 @@ import RussianForum from '../pages/RussianForum';
 import SamoanForum from '../pages/SamoanForum';
 import SpanishForum from '../pages/SpanishForum';
 import ThaiForum from '../pages/ThaiForum';
+import ArabicForum from '../pages/ArabicForum';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -49,6 +49,7 @@ class App extends React.Component {
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/homepage" component={HomePage}/>
               <ProtectedRoute path="/forums" component={Forums}/>
+                <ProtectedRoute path="/arabicforum" component={ArabicForum}/>
                 <ProtectedRoute path="/thaiforum" component={ThaiForum}/>
                 <ProtectedRoute path="/spanishforum" component={SpanishForum}/>
                 <ProtectedRoute path="/samoanforum" component={SamoanForum}/>
@@ -66,7 +67,6 @@ class App extends React.Component {
                 <ProtectedRoute path="/tagalogforum" component={TagalogForum}/>
                 <ProtectedRoute path="/cambodianforum" component={CambodianForum}/>
                 <ProtectedRoute path="/japaneseforum" component={JapaneseForum}/>
-              <ProtectedRoute pathe="/arabicforum" component={ArabicForum}/>
               <ProtectedRoute path="/addpost" component={AddPost}/>
                <ProtectedRoute path="/addrequest" component={AddRequest}/>
                 <AdminProtectedRoute path="/adminrequest" component={ListRequestAdmin}/>
