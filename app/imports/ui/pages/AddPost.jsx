@@ -47,6 +47,7 @@ class AddPost extends React.Component {
             <Header as="h2" textAlign="Left Aligned" inverted>Make Your Post</Header>
             <AutoForm ref={(ref) => { this.formRef = ref; }} schema={PostSchema} onSubmit={this.submit}>
               <Segment>
+                <SelectField name='language'/>
                 <TextField name='topic'/>
                 <LongTextField name='description' />
                 <SubmitField value='Submit'/>

@@ -11,6 +11,11 @@ const PostSchema = new SimpleSchema({
   description: String,
     language: String,
   owner: String,
+    language: {
+        type: String,
+       allowedValues: ['Aradic', 'Cambodian', 'Filipino', 'French', 'German', 'Greek', 'Hawaiian', 'Hindi', 'Ilokano', 'Indonesian', 'Janpanese', 'Korean', 'Latin', 'Maori', 'Russian', 'Samoan', 'Spanish', 'Thai'],
+        defaultValue: 'Aradic',
+    },
 }, { tracker: Tracker });
 
 /** Attach this schema to the collection. */
