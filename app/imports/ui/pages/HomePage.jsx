@@ -14,7 +14,7 @@ class HomePage extends React.Component {
         <Container>
           <Header as="h2" inverted textAlign="centered">Announcements</Header>
           <Header inverted textAlign="centered">E Komo Mai! Announcements about upcoming events and communications from Admin and other organiztions can be found here</Header>
-          <Button floated='right' href='#AddPost' inverted>New Post</Button>
+          <Button floated='right' href="#addpost" inverted>New Post</Button>
           <Card.Group>
             {this.props.posts.map((post, index) => <Post key={index} post={post} comments={this.props.comments.filter(comment => (comment.contactId === post._id))}/>)}
           </Card.Group>

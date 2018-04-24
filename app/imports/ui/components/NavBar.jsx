@@ -24,6 +24,8 @@ class NavBar extends React.Component {
                   Language Forums</Menu.Item>,
                 <Menu.Item as={NavLink} activeClassName="active" exact to="/addrequest" key='addrequest'>
                   Add Request</Menu.Item>,
+                <Menu.Item as={NavLink} activeClassName="active" exact to="/addpost" key='addpost'>
+                  Add Post</Menu.Item>,
                 <Menu.Item as={NavLink} activeClassName="active" exact to="/profile" key='profile'>
                   My Profile</Menu.Item>]
           ) : ''}
