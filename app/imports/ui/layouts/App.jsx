@@ -35,6 +35,7 @@ import SamoanForum from '../pages/SamoanForum';
 import SpanishForum from '../pages/SpanishForum';
 import ThaiForum from '../pages/ThaiForum';
 import ArabicForum from '../pages/ArabicForum';
+import userProfile from '../pages/userProfile';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -67,6 +68,7 @@ class App extends React.Component {
                 <ProtectedRoute path="/tagalogforum" component={TagalogForum}/>
                 <ProtectedRoute path="/cambodianforum" component={CambodianForum}/>
                 <ProtectedRoute path="/japaneseforum" component={JapaneseForum}/>
+                <ProtectedRoute path="/userprofile" component={userProfile}/>
               <ProtectedRoute path="/addpost" component={AddPost}/>
                <ProtectedRoute path="/addrequest" component={AddRequest}/>
                 <AdminProtectedRoute path="/adminrequest" component={ListRequestAdmin}/>
