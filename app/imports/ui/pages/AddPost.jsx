@@ -50,6 +50,7 @@ class AddPost extends React.Component {
               <Segment>
                 <TextField name='topic'/>
                 <LongTextField name='description' />
+                  <SelectField name='language'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
                 <HiddenField name='owner' value='fakeuser@foo.com'/>
