@@ -8,9 +8,9 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
 
-class HomePage extends React.Component{
+class HomePage extends React.Component {
   render() {
-    return(
+    return (
         <Container>
           <Header as="h2" inverted textAlign="centered">Announcements</Header>
           <Header inverted textAlign="centered">E Komo Mai! Announcements about upcoming events and communications from Admin and other organiztions can be found here</Header>
@@ -36,7 +36,7 @@ export default withTracker(() => {
   const subscription = Meteor.subscribe('Posts');
   const subscription2 = Meteor.subscribe('Comments');
   return {
-    posts: Posts.find({}).fetch(),
+    posts: Posts.find({ language: 'All' }).fetch(),
     comments: Comments.find({}).fetch(),
     ready: (subscription.ready() && subscription2.ready()),
   };

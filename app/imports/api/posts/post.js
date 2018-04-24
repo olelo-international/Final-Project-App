@@ -9,6 +9,7 @@ const Posts = new Mongo.Collection('Posts');
 const PostSchema = new SimpleSchema({
   topic: String,
   description: String,
+    language: String,
   owner: String,
 }, { tracker: Tracker });
 

@@ -8,7 +8,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class ArabicForum extends React.Component {
+class FrenchForum extends React.Component {
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
@@ -19,7 +19,7 @@ class ArabicForum extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center" inverted>Arabic Forum</Header>
+          <Header as="h2" textAlign="center" inverted>French Forum</Header>
           <Card.Group>
             {this.props.posts.map((post, index) => <Post key={index} post={post}
             comments={this.props.comments.filter(comment => (comment.contactId === post._id))}/>)}
@@ -30,7 +30,7 @@ class ArabicForum extends React.Component {
 }
 
 /** Require an array of Stuff documents in the props. */
-ArabicForum.propTypes = {
+FrenchForum.propTypes = {
   posts: PropTypes.array.isRequired,
     comments: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
@@ -42,8 +42,8 @@ export default withTracker(() => {
   const subscription = Meteor.subscribe('Posts');
     const subscription2 = Meteor.subscribe('Comments');
   return {
-    posts: Posts.find({ language: 'Arabic' }).fetch(),
+    posts: Posts.find({ language: 'French' }).fetch(),
       comments: Comments.find({}).fetch(),
       ready: (subscription.ready() && subscription2.ready()),
   };
-})(ArabicForum);
+})(FrenchForum);

@@ -18,6 +18,23 @@ import Signout from '../pages/Signout';
 import HomePage from '../pages/HomePage';
 import Forums from '../pages/Forums';
 import ArabicForum from '../pages/ArabicForum';
+import JapaneseForum from '../pages/JapaneseForum';
+import CambodianForum from '../pages/CambodianForum';
+import FilipinoForum from '../pages/FilipinoForum';
+import FrenchForum from '../pages/FrenchForum';
+import GermanForum from '../pages/GermanForum';
+import GreekForum from '../pages/GreekForum';
+import HawaiianForum from '../pages/HawaiianForum';
+import HindiForum from '../pages/HindiForum';
+import IlokanoForum from '../pages/IlokanoForum';
+import IndonesianForum from '../pages/IndonesianForum';
+import KoreanForum from '../pages/KoreanForum';
+import LatinForum from '../pages/LatinForum';
+import MaoriForum from '../pages/MaoriForum';
+import RussianForum from '../pages/RussianForum';
+import SamoanForum from '../pages/SamoanForum';
+import SpanishForum from '../pages/SpanishForum';
+import ThaiForum from '../pages/ThaiForum';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -32,6 +49,23 @@ class App extends React.Component {
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/homepage" component={HomePage}/>
               <ProtectedRoute path="/forums" component={Forums}/>
+                <ProtectedRoute path="/thaiforum" component={ThaiForum}/>
+                <ProtectedRoute path="/spanishforum" component={SpanishForum}/>
+                <ProtectedRoute path="/samoanforum" component={SamoanForum}/>
+                <ProtectedRoute path="/russianforum" component={RussianForum}/>
+                <ProtectedRoute path="/maoriforum" component={MaoriForum}/>
+                <ProtectedRoute path="/latinforum" component={LatinForum}/>
+                <ProtectedRoute path="/koreanforum" component={KoreanForum}/>
+                <ProtectedRoute path="/indonesianforum" component={IndonesianForum}/>
+                <ProtectedRoute path="/ilokanoforum" component={IlokanoForum}/>
+                <ProtectedRoute path="/hindiforum" component={HindiForum}/>
+                <ProtectedRoute path="/hawaiianforum" component={HawaiianForum}/>
+                <ProtectedRoute path="/greekforum" component={GreekForum}/>
+                <ProtectedRoute path="/germanforum" component={GermanForum}/>
+                <ProtectedRoute path="/frenchforum" component={FrenchForum}/>
+                <ProtectedRoute path="/filipinoforum" component={FilipinoForum}/>
+                <ProtectedRoute path="/cambodianforum" component={CambodianForum}/>
+                <ProtectedRoute path="/japaneseforum" component={JapaneseForum}/>
               <ProtectedRoute pathe="/arabicforum" component={ArabicForum}/>
               <ProtectedRoute path="/addpost" component={AddPost}/>
                <ProtectedRoute path="/addrequest" component={AddRequest}/>
