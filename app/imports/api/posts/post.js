@@ -9,12 +9,11 @@ const Posts = new Mongo.Collection('Posts');
 const PostSchema = new SimpleSchema({
   topic: String,
   description: String,
-    language: String,
   owner: String,
     language: {
         type: String,
-       allowedValues: ['Aradic', 'Cambodian', 'Filipino', 'French', 'German', 'Greek', 'Hawaiian', 'Hindi', 'Ilokano', 'Indonesian', 'Janpanese', 'Korean', 'Latin', 'Maori', 'Russian', 'Samoan', 'Spanish', 'Thai'],
-        defaultValue: 'Aradic',
+       allowedValues: ['Arabic', 'Cambodian', 'Filipino', 'French', 'German', 'Greek', 'Hawaiian', 'Hindi', 'Ilokano', 'Indonesian', 'Janpanese', 'Korean', 'Latin', 'Maori', 'Russian', 'Samoan', 'Spanish', 'Thai','General'],
+        defaultValue: 'General',
     },
 }, { tracker: Tracker });
 
