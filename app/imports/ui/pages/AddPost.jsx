@@ -5,6 +5,7 @@ import AutoForm from 'uniforms-semantic/AutoForm';
 import TextField from 'uniforms-semantic/TextField';
 import LongTextField from 'uniforms-semantic/LongTextField';
 import SubmitField from 'uniforms-semantic/SubmitField';
+import SelectField from 'uniforms-semantic/SelectField';
 import HiddenField from 'uniforms-semantic/HiddenField';
 import ErrorsField from 'uniforms-semantic/ErrorsField';
 import { Bert } from 'meteor/themeteorchef:bert';
@@ -34,9 +35,9 @@ class AddPost extends React.Component {
 
   /** On submit, insert the data. */
   submit(data) {
-    const { topic, description } = data;
+    const { topic, description, language } = data;
     const owner = Meteor.user().username;
-    Posts.insert({ topic, description, owner }, this.insertCallback);
+    Posts.insert({ topic, description, language, owner }, this.insertCallback);
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
