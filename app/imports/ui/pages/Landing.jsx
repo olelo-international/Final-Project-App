@@ -15,7 +15,7 @@ class Landing extends React.Component {
                   <div className='animated-sentence'>
                   <span><Header as='h1' inverted>Connect with UH Manoa students and improve your foreign language
                     studies!</Header></span>
-                    <span><Header as='h1' inverted>E hui me nā haumāna Manoa a me ka hoʻomaikaʻiʻana i kāu
+                    <span><Header as='h1' inverted>E hui me nā haumāna o Mānoa a me ka hoʻomaikaʻi ʻana i kāu
                     mau&apos;ōlelo&apos;oko&apos;a haole!</Header></span>
                     <span><Header as='h1' inverted>Connectez-vous avec les étudiants de UH Manoa et améliorez vos études
                     de langues étrangères!</Header></span>
