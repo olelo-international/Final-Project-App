@@ -7,8 +7,7 @@ import { Comments } from '../../api/comment/comment.js';
 /** This subscription publishes only the documents associated with the logged in user */
 Meteor.publish('Comments', function publish() {
   if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Comments.find({ owner: username });
+    return Comments.find({ });
   }
   return this.ready();
 });
