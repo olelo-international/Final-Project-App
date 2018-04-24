@@ -12,7 +12,7 @@ const PostSchema = new SimpleSchema({
   owner: String,
     language: {
         type: String,
-       allowedValues: ['Arabic', 'Cambodian', 'Filipino', 'French', 'German', 'Greek', 'Hawaiian', 'Hindi', 'Ilokano', 'Indonesian', 'Janpanese', 'Korean', 'Latin', 'Maori', 'Russian', 'Samoan', 'Spanish', 'Thai','General'],
+ allowedValues: ['Arabic', 'Cambodian', 'Filipino', 'French', 'German', 'Greek', 'Hawaiian', 'Hindi', 'Ilokano', 'Indonesian', 'Janpanese', 'Korean', 'Latin', 'Maori', 'Russian', 'Samoan', 'Spanish', 'Thai', 'General'],
         defaultValue: 'General',
     },
 }, { tracker: Tracker });
