@@ -45,10 +45,10 @@ class Forums extends React.Component {
             </Card>
             <Card>
               <Card.Content>
-                <Card.Header>Filipino</Card.Header>
+                <Card.Header>Tagalog</Card.Header>
                 <Card.Meta>101, 102, 201, 202, 301, 401, 435</Card.Meta>
               </Card.Content>
-              <Card.Content extra as={NavLink} activeClassName="active" exact to="/filipinoforum" key='filipinoforum'>
+              <Card.Content extra as={NavLink} activeClassName="active" exact to="/tagalogforum" key='tagalogforum'>
                 <div className='ui button'>
                   <Button color='teal'>Go to Forum</Button>
                 </div>

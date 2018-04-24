@@ -20,7 +20,7 @@ import Forums from '../pages/Forums';
 import ArabicForum from '../pages/ArabicForum';
 import JapaneseForum from '../pages/JapaneseForum';
 import CambodianForum from '../pages/CambodianForum';
-import FilipinoForum from '../pages/FilipinoForum';
+import TagalogForum from '../pages/TagalogForum';
 import FrenchForum from '../pages/FrenchForum';
 import GermanForum from '../pages/GermanForum';
 import GreekForum from '../pages/GreekForum';
@@ -63,7 +63,7 @@ class App extends React.Component {
                 <ProtectedRoute path="/greekforum" component={GreekForum}/>
                 <ProtectedRoute path="/germanforum" component={GermanForum}/>
                 <ProtectedRoute path="/frenchforum" component={FrenchForum}/>
-                <ProtectedRoute path="/filipinoforum" component={FilipinoForum}/>
+                <ProtectedRoute path="/tagalogforum" component={TagalogForum}/>
                 <ProtectedRoute path="/cambodianforum" component={CambodianForum}/>
                 <ProtectedRoute path="/japaneseforum" component={JapaneseForum}/>
               <ProtectedRoute pathe="/arabicforum" component={ArabicForum}/>

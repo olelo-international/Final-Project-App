@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Card, Header, Loader } from 'semantic-ui-react';
+import { Container, Card, Header, Loader, Button } from 'semantic-ui-react';
 import { Posts } from '/imports/api/posts/post';
 import { Comments } from '/imports/api/comment/comment';
 import Post from '/imports/ui/components/Post';
@@ -20,6 +20,7 @@ class IlokanoForum extends React.Component {
     return (
         <Container>
           <Header as="h2" textAlign="center" inverted>Ilokano Forum</Header>
+          <Button floated='right' href='#AddPost' inverted>New Post</Button>
           <Card.Group>
             {this.props.posts.map((post, index) => <Post key={index} post={post}
             comments={this.props.comments.filter(comment => (comment.contactId === post._id))}/>)}
