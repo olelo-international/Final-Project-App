@@ -11,7 +11,7 @@
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
   "defaultPosts": [
-    { "topic": "Welcome", "owner": "john@foo.com", "description": "Welcome to 'Olelo International! Post any question you have in the language forums. You can comment under any post." },
+    { "topic": "Welcome", "language": "General", "owner": "john@foo.com", "description": "Welcome to 'Olelo International! Post any question you have in the language forums. You can comment under any post." },
     { "topic": "Hello", "language": "Arabic", "owner": "john@foo.com", "description": "As-salam alaykom" },
     { "topic": "Hello", "language": "Japanese", "owner": "admin@foo.com", "description": "Konnichiwa" },
     { "topic": "Hello", "language": "Korean", "owner": "admin@foo.com", "description": "anyoung haseyo" },
