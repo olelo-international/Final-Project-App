@@ -10,6 +10,7 @@ const PostSchema = new SimpleSchema({
   topic: String,
   description: String,
   owner: String,
+  createdAt: Date,
     language: {
         type: String,
  allowedValues: ['Arabic', 'Cambodian', 'Tagalog', 'French', 'German', 'Greek', 'Hawaiian', 'Hindi', 'Ilokano', 'Indonesian', 'Japanese', 'Korean', 'Latin', 'Maori', 'Russian', 'Samoan', 'Spanish', 'Thai', 'General'],

@@ -43,7 +43,7 @@ export default withTracker(() => {
   const subscription = Meteor.subscribe('Posts');
     const subscription2 = Meteor.subscribe('Comments');
   return {
-    posts: Posts.find({ language: 'Korean' }).fetch(),
+    posts: Posts.find({ language: 'Korean' }, { sort: { createdAt: -1 } }).fetch(),
       comments: Comments.find({}).fetch(),
       ready: (subscription.ready() && subscription2.ready()),
   };

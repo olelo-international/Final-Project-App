@@ -35,9 +35,9 @@ class AddPost extends React.Component {
 
   /** On submit, insert the data. */
   submit(data) {
-    const { topic, description, language } = data;
+    const { topic, description, language, createdAt } = data;
     const owner = Meteor.user().username;
-    Posts.insert({ topic, description, language, owner }, this.insertCallback);
+    Posts.insert({ topic, description, language, owner, createdAt }, this.insertCallback);
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
@@ -54,6 +54,7 @@ class AddPost extends React.Component {
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
                 <HiddenField name='owner' value='fakeuser@foo.com'/>
+                <HiddenField name='createdAt' value={new Date()}/>
               </Segment>
             </AutoForm>
           </Grid.Column>
