@@ -10,8 +10,6 @@
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
-  "defaultPosts": [
-    ],
   "defaultRequest": [
     {"language": "Japanese", "owner": "john@foo.com"},
     {"language": "Korean", "owner": "john@foo.com"},

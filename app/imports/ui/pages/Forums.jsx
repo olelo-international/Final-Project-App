@@ -24,7 +24,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>Arabic</Card.Header>
-                <Card.Meta>101, 201</Card.Meta>
+                <Card.Meta>Available classes: 101, 201</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/arabicforum" key='arabicforum'>
                 <div className='ui button'>
@@ -35,7 +35,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>Cambodian</Card.Header>
-                <Card.Meta>101, 103, 105, 205</Card.Meta>
+                <Card.Meta>Available classes: 101, 103, 105, 205</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/cambodianforum" key='cambodianforum'>
                 <div className='ui button'>
@@ -46,7 +46,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>Tagalog</Card.Header>
-                <Card.Meta>101, 102, 201, 202, 301, 401, 435</Card.Meta>
+                <Card.Meta>Available classes: 101, 102, 201, 202, 301, 401, 435</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/tagalogforum" key='tagalogforum'>
                 <div className='ui button'>
@@ -57,7 +57,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>French</Card.Header>
-                <Card.Meta>101, 102, 201, 202, 301, 302, 306, 311, 312, 331, 405, 491E, 601, 735</Card.Meta>
+                <Card.Meta>Available classes: 101, 102, 201, 202, 301, 302, 306, 311, 312, 331, 405, 491E, 601, 735</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/frenchforum" key='frenchforum'>
                 <div className='ui button'>
@@ -68,7 +68,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>German</Card.Header>
-                <Card.Meta>101, 102, 201, 202, 301, 303, 20, 401</Card.Meta>
+                <Card.Meta>Available classes: 101, 102, 201, 202, 301, 303, 20, 401</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/germanforum" key='germanforum'>
                 <div className='ui button'>
@@ -79,7 +79,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>Greek</Card.Header>
-                <Card.Meta>101, 201, 332</Card.Meta>
+                <Card.Meta>Available classes: 101, 201, 332</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/greekforum" key='greekforum'>
                 <div className='ui button'>
@@ -90,7 +90,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>Hawaiian</Card.Header>
-                <Card.Meta>100, 101, 102, 201, 202, 284, 301, 302, 321, 331, 401, 402, 425, 433, 445, 470, 488, 601,
+                <Card.Meta>Available classes: 100, 101, 102, 201, 202, 284, 301, 302, 321, 331, 401, 402, 425, 433, 445, 470, 488, 601,
                 605, 615, 652</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/hawaiianforum" key='hawaiianforum'>
@@ -102,7 +102,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>Hindi</Card.Header>
-                <Card.Meta>101, 201, 301</Card.Meta>
+                <Card.Meta>Available classes: 101, 201, 301</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/hindiforum" key='hindiforum'>
                 <div className='ui button'>
@@ -113,7 +113,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>Ilokano</Card.Header>
-                <Card.Meta>101, 201, 301, 401, 424, 486</Card.Meta>
+                <Card.Meta>Available classes: 101, 201, 301, 401, 424, 486</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/ilokanoforum" key='ilokanoforum'>
                 <div className='ui button'>
@@ -124,7 +124,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>Indonesian</Card.Header>
-                <Card.Meta>103, 203, 305, 307, 401, 452</Card.Meta>
+                <Card.Meta>Available classes: 103, 203, 305, 307, 401, 452</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/indonesianforum" key='indonesianforum'>
                 <div className='ui button'>
@@ -135,7 +135,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>Japanese</Card.Header>
-                <Card.Meta>101, 102, 201, 202</Card.Meta>
+                <Card.Meta>Available classes: 101, 102, 201, 202</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/japaneseforum" key='japaneseforum'>
                 <div className='ui button'>
@@ -146,7 +146,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>Korean</Card.Header>
-                <Card.Meta>101, 102, 201, 202, 301, 302</Card.Meta>
+                <Card.Meta>Available classes: 101, 102, 201, 202, 301, 302</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/koreanforum" key='koreanforum'>
                 <div className='ui button'>
@@ -157,7 +157,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>Latin</Card.Header>
-                <Card.Meta>101, 201, 303</Card.Meta>
+                <Card.Meta>Available classes: 101, 201, 303</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/latinforum" key='latinforum'>
                 <div className='ui button'>
@@ -168,7 +168,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>Maori</Card.Header>
-                <Card.Meta>101, 201</Card.Meta>
+                <Card.Meta>Available classes: 101, 201</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/maoriforum" key='maoriforum'>
                 <div className='ui button'>
@@ -179,7 +179,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>Russian</Card.Header>
-                <Card.Meta>101, 201, 209, 303, 306, 419</Card.Meta>
+                <Card.Meta>Available classes: 101, 201, 209, 303, 306, 419</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/russianforum" key='russianforum'>
                 <div className='ui button'>
@@ -190,7 +190,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>Samoan</Card.Header>
-                <Card.Meta>101, 201, 227, 321, 421, 461</Card.Meta>
+                <Card.Meta>Available classes: 101, 201, 227, 321, 421, 461</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/samoanforum" key='samoanforum'>
                 <div className='ui button'>
@@ -201,7 +201,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>Spanish</Card.Header>
-                <Card.Meta>101, 102, 201, 202</Card.Meta>
+                <Card.Meta>Available classes: 101, 102, 201, 202</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/spanishforum" key='spanishforum'>
                 <div className='ui button'>
@@ -212,7 +212,7 @@ class Forums extends React.Component {
             <Card>
               <Card.Content>
                 <Card.Header>Thai</Card.Header>
-                <Card.Meta>103, 105, 201, 401, 451</Card.Meta>
+                <Card.Meta>Available classes: 103, 105, 201, 401, 451</Card.Meta>
               </Card.Content>
               <Card.Content extra as={NavLink} activeClassName="active" exact to="/thaiforum" key='thaiforum'>
                 <div className='ui button'>
