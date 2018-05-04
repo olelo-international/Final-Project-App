@@ -46,7 +46,7 @@ class AddRequest extends React.Component {
                     <Header as="h2" textAlign="center" inverted> Request a Forum </Header>
                     <AutoForm ref={(ref) => { this.formRef = ref; }} schema={RequestSchema} onSubmit={this.submit}>
                         <Segment>
-                            <TextField name='language'/>
+                            <TextField name='language' placeholder='What language forum you want Admin to add '/>
                             <SubmitField value='Submit'/>
                             <ErrorsField/>
                             <HiddenField name='owner' value='fakeuser@foo.com'/>
