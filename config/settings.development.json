@@ -4,7 +4,12 @@
     { "email": "john@foo.com", "password": "changeme" }
   ],
   "defaultPosts": [
-    ],
+    { "topic": "Welcome", "createdAt": "5/4/2018", "language": "General", "owner": "john@foo.com", "description": "Welcome to 'Olelo International! Post any question you have in the language forums. You can comment under any post." },
+    { "topic": "Hello", "createdAt": "5/4/2018", "language": "Arabic", "owner": "john@foo.com", "description": "As-salam alaykom" },
+    { "topic": "Hello", "createdAt": "5/4/2018", "language": "Japanese", "owner": "admin@foo.com", "description": "Konnichiwa" },
+    { "topic": "Hello", "createdAt": "5/4/2018", "language": "Korean", "owner": "admin@foo.com", "description": "anyoung haseyo" },
+    { "topic": "Hello", "createdAt": "5/4/2018", "language": "Spanish", "owner": "admin@foo.com", "description": "Hola" }
+  ],
   "defaultRequest": [
     {"language": "Japanese", "owner": "john@foo.com"},
     {"language": "Korean", "owner": "john@foo.com"},
